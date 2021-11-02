@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Form from './components/Form.js';
+//import List from './components/List'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+
+
+class App extends React.Component {
+  constructor(){
+  super()
+
+  //01
+  this.state = {
+    tasks: []
+   }
+  }
+
+  addTask(e){ ("")
+  // this.setState({tasks: [{ description: "Description de ma tache", status: "To do" },this.state.tasks]})
+  // console.log(this.state.tasks);
+  }
+  
+
+
+render(){
+  return(
+
+ //afficher le form
+<Form addTask ={this.addTask}/>
+
+//<List tasks={this.state.tasks}
+//onClickdelete={this.deleteTask}
+///>
+
+  )
+  }}
 export default App;
